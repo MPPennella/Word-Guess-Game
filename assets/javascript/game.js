@@ -33,19 +33,7 @@ var game = {
         // TESTING CODE
         // Using ` key (keyCode 192) to initialize game for testing
         if (keyCode == 192) {
-            // Choose a new word to be guessed
-            this.chooseWord();
-
-            // Setup wordField of proper length with underscores
-            this.wordField = ""
-            for (let i=0; i<this.chosenWord.length; ++i) {
-                this.wordField += "_";
-            }
-            console.log(this.wordField);
-
-            // Empty wrongGuesses array
-            this.wrongGuesses = [];
-            console.log(this.wrongGuesses);
+           this.newGame();
             
         }
 
@@ -96,6 +84,29 @@ var game = {
             console.log("---------------------------------");
 
         } 
+    },
+
+    // Chooses a new word to be guessed and reinitializes game parameters to starting values
+    newGame() {
+
+        // Choose a new word to be guessed
+        this.chooseWord();
+
+        // Setup wordField of proper length with underscores
+        this.wordField = ""
+        for (let i=0; i<this.chosenWord.length; ++i) {
+            this.wordField += "_";
+        }
+        console.log(this.wordField);
+
+        // Empty wrongGuesses array
+        this.wrongGuesses = [];
+        console.log(this.wrongGuesses);
+
+        // Reset guessesRemaining counter
+        this.guessesRemaining = 10;
+        console.log(this.guessesRemaining);
+    
     },
 
     // Determines if a letter has been guessed already
