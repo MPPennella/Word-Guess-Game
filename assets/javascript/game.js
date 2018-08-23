@@ -49,9 +49,33 @@ var game = {
             
         }
 
-        // Checks if key was alphabetic A-Z key
+        // Checks if key was alphabetic A-Z key (keyCode range 65 to 90)
         if (65<=keyCode && keyCode<=90) {
-            console.log(String.fromCharCode(keyCode));
+            // Convert keycode to string representation of letter
+            let letter = String.fromCharCode(keyCode);
+            console.log(letter);
+
+            // Check if letter has been guessed before - only execute if new guess
+            if (true) {
+                // Check if keypress is letter in word
+                if (this.chosenWord.includes(letter)) {
+                    console.log("MATCH");
+
+                    // Find position of all matches in chosenWord and insert letter at matching indices of wordField
+
+                    // If entire word is guessed, VICTORY
+
+                } else {
+                    console.log("NO MATCH");
+
+                    // Add letter to list of wrong guesses
+
+                    // Decrement number of remaining guesses by 1
+
+                    // If no guesses left, DEFEAT
+                }
+            } 
+            
         } 
     },
 
