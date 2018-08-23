@@ -62,6 +62,13 @@ var game = {
                     console.log("MATCH");
 
                     // Find position of all matches in chosenWord and insert letter at matching indices of wordField
+                    for (let i=0; i<this.chosenWord.length; ++i) {
+                        if (this.chosenWord.charAt(i) == letter) {
+                            // Cut off substrings before and after index and substitute letter in between
+                            this.wordField = this.wordField.substring(0,i) + letter + this.wordField.substring(i+1);
+                        }
+                    }
+                    console.log(this.wordField);
 
                     // If entire word is guessed, VICTORY
 
@@ -69,6 +76,8 @@ var game = {
                     console.log("NO MATCH");
 
                     // Add letter to list of wrong guesses
+                    this.wrongGuesses.push(letter);
+                    console.log(this.wrongGuesses.toString());
 
                     // Decrement number of remaining guesses by 1
 
