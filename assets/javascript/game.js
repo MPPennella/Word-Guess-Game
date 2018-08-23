@@ -4,10 +4,13 @@ var game = {
     // Array that stores all the objects to be guessed
     wordChoices: [
         {
-            word: "DEFAULT1"
+            word: "DEFAULTA"
         },
         {
-            word: "DEFAULT2"
+            word: "DEFAULTB"
+        },
+        {
+            word: "LONGDEFAULT"
         }
     ],
 
@@ -26,6 +29,26 @@ var game = {
 
     // function takes keyboard input and performs the appropriate tasks
     keyHandler(keyCode)  {
+
+        // TESTING CODE
+        // Using ` key to initialize game for testing
+        if (keyCode == 192) {
+            // Choose a new word to be guessed
+            this.chooseWord();
+
+            // Setup wordField of proper length with underscores
+            this.wordField = ""
+            for (let i=0; i<this.chosenWord.length; ++i) {
+                this.wordField += "_";
+            }
+            console.log(this.wordField);
+
+            // Empty wrongGuesses array
+            this.wrongGuesses = [];
+            console.log(this.wrongGuesses);
+            
+        }
+
         // Checks if key was alphabetic A-Z key
         if (65<=keyCode && keyCode<=90) {
             console.log(String.fromCharCode(keyCode));
