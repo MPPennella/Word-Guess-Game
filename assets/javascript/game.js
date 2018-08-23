@@ -18,7 +18,7 @@ var game = {
     chosenWord: "",
     wordField: "",
     wrongGuesses: [],
-    guessesRemaining: 0,
+    guessesRemaining: 10,
 
     // function chooses a random member of wordChoices to be the target word
     chooseWord() {
@@ -69,6 +69,10 @@ var game = {
                     }
                     
                     // If entire word is guessed, VICTORY
+                    if (this.chosenWord == this.wordField) {
+                        // VICTORY
+                        console.log("YOU WON");
+                    }
 
                 } else {
                     console.log("NO MATCH");
@@ -77,12 +81,18 @@ var game = {
                     this.wrongGuesses.push(letter);
 
                     // Decrement number of remaining guesses by 1
+                    this.guessesRemaining--;
 
                     // If no guesses left, DEFEAT
+                    if (this.guessesRemaining == 0) {
+                        // DEFEAT
+                        console.log("YOU LOST");
+                    }
                 }
             } 
             console.log("KNOWN:\t"+this.wordField);
             console.log("WRONG:\t"+this.wrongGuesses.toString());
+            console.log("Guesses remaining: "+this.guessesRemaining);
             console.log("---------------------------------");
 
         } 
