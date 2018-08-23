@@ -78,10 +78,9 @@ var game = {
                     }
                 }
             } 
-            console.log("KNOWN:\t"+this.wordField);
-            console.log("WRONG:\t"+this.wrongGuesses.toString());
-            console.log("Guesses remaining: "+this.guessesRemaining);
-            console.log("---------------------------------");
+
+            // Push value changes to screen
+            this.updateGameInfo();
 
         } 
     },
@@ -117,6 +116,17 @@ var game = {
             return true;
         }
         return false;
+    },
+
+    // Updates the html document with latest game parameter values
+    updateGameInfo() {
+        // Placeholders for testing
+
+        // Update word with guessed letters, wrong guesses list, guesses remaining
+        console.log("KNOWN:\t"+this.wordField);
+        console.log("WRONG:\t"+this.wrongGuesses.toString());
+        console.log("Guesses remaining: "+this.guessesRemaining);
+        console.log("---------------------------------");
     }
 
 }
