@@ -53,7 +53,6 @@ var game = {
         if (65<=keyCode && keyCode<=90) {
             // Convert keycode to string representation of letter
             let letter = String.fromCharCode(keyCode);
-            console.log(letter);
 
             // Check if letter has been guessed before - only execute if new guess
             if ( !this.letterGuessed(letter) ) {
@@ -68,8 +67,7 @@ var game = {
                             this.wordField = this.wordField.substring(0,i) + letter + this.wordField.substring(i+1);
                         }
                     }
-                    console.log(this.wordField);
-
+                    
                     // If entire word is guessed, VICTORY
 
                 } else {
@@ -77,14 +75,16 @@ var game = {
 
                     // Add letter to list of wrong guesses
                     this.wrongGuesses.push(letter);
-                    console.log(this.wrongGuesses.toString());
 
                     // Decrement number of remaining guesses by 1
 
                     // If no guesses left, DEFEAT
                 }
             } 
-            
+            console.log("KNOWN:\t"+this.wordField);
+            console.log("WRONG:\t"+this.wrongGuesses.toString());
+            console.log("---------------------------------");
+
         } 
     },
 
