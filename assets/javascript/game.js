@@ -90,9 +90,11 @@ var game = {
 
     // Determines if a letter has been guessed already
     letterGuessed(letter) {
-        // Check passed letter against existing correct and incorrect guesses
-
-        // Placeholder - always returns that letter was not previously used
+        // Check passed letter against existing correct and incorrect guesses, return true if exists in those parameters
+        if (this.wrongGuesses.includes(letter) || this.wordField.includes(letter)) {
+            console.log("Already guessed: "+letter);
+            return true;
+        }
         return false;
     }
 
