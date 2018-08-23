@@ -4,7 +4,11 @@ var game = {
     // Array that stores all the objects to be guessed
     wordChoices: [
         {
-            word: "DEFAULTA"
+            word: "DEFAULTA",
+            name: "Default Name",
+            description: "Short description about Default Name. Just a couple of sentences.",
+            imgSrc: "image.png",
+            soundSrc: "audio.mp3"
         },
         {
             word: "DEFAULTB"
