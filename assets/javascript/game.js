@@ -31,7 +31,7 @@ var game = {
     keyHandler(keyCode)  {
 
         // TESTING CODE
-        // Using ` key to initialize game for testing
+        // Using ` key (keyCode 192) to initialize game for testing
         if (keyCode == 192) {
             // Choose a new word to be guessed
             this.chooseWord();
@@ -56,7 +56,7 @@ var game = {
             console.log(letter);
 
             // Check if letter has been guessed before - only execute if new guess
-            if (true) {
+            if ( !this.letterGuessed(letter) ) {
                 // Check if keypress is letter in word
                 if (this.chosenWord.includes(letter)) {
                     console.log("MATCH");
@@ -78,6 +78,14 @@ var game = {
             
         } 
     },
+
+    // Determines if a letter has been guessed already
+    letterGuessed(letter) {
+        // Check passed letter against existing correct and incorrect guesses
+
+        // Placeholder - always returns that letter was not previously used
+        return false;
+    }
 
 }
 
