@@ -127,10 +127,9 @@ var game = {
         // Placeholders for testing
 
         // Update word with guessed letters, wrong guesses list, guesses remaining
-        console.log("KNOWN:\t"+this.wordField);
-        console.log("WRONG:\t"+this.wrongGuesses.toString());
-        console.log("Guesses remaining: "+this.guessesRemaining);
-        console.log("---------------------------------");
+        document.getElementById("wordField").textContent = this.wordField;
+        document.getElementById("wrongGuesses").textContent = this.wrongGuesses.toString();
+        document.getElementById("guessesRemaining").textContent = this.guessesRemaining;
     }
 
 }
