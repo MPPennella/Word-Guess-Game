@@ -24,6 +24,7 @@ var game = {
     wordField: "",
     wrongGuesses: [],
     guessesRemaining: 10,
+    wins: 0,
 
     // function chooses a random member of wordChoices to be the target word
     chooseWord() {
@@ -71,6 +72,7 @@ var game = {
                         if (this.chosenWord == this.wordField) {
                             // VICTORY
                             console.log("YOU WON");
+                            this.endGame(true);
                         }
 
                     } else {
@@ -86,6 +88,7 @@ var game = {
                         if (this.guessesRemaining == 0) {
                             // DEFEAT
                             console.log("YOU LOST");
+                            this.endGame(false);
                         }
                     }
                 } 
@@ -121,10 +124,27 @@ var game = {
 
         // Update screen with intital game values
         this.updateGameInfo();
-        
+
         // Set game state to active
         this.state = "activeGame";
     
+    },
+
+    // Ends the current game, takes a boolean to indicate victory/defeat
+    endGame(victory) {
+        if (victory) {
+            // Add 1 to the win count and push to document
+            this.wins++;
+            document.getElementById("wins").textContent = this.wins;
+        } else {
+
+        }
+
+        // Update instructions
+        document.getElementById("instructions").textContent = "Press any key to play again!";
+
+        // Changes state to inter-game
+        this.state = "interGame";
     },
 
     // Determines if a letter has been guessed already
