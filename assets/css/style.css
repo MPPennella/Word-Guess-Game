@@ -1,0 +1,20 @@
+.gamePanel {
+    width: 80%;
+    height: 500px;
+
+    margin: 0 auto;
+    border: 5px solid red;
+    border-radius: 30px;
+    padding: 20px;
+
+    background: #59de8b;
+}
+
+.subPanel {
+    margin: 20px;
+    border: 5px solid red;
+    border-radius: 15px;
+    padding: 20px;
+
+    background:palegoldenrod;
+}
