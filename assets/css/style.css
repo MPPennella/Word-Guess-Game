@@ -40,7 +40,7 @@ body {
     float: right;
 }
 
-.h210 {
+.h140 {
     height: 140px;
 }
 #gameFuncContainer {
@@ -85,5 +85,15 @@ body {
 }
 
 #charImage {
+    float: left;
+
     width: 200px;
+
+    margin: 0 10px 10px 0;
+    border: 2px solid red;
+    border-radius: 5px;
+}
+
+#description {
+    display: block;
 }
