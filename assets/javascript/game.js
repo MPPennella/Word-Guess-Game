@@ -43,13 +43,13 @@ var game = {
             
         }
 
+        // Run this to start a new game if any key is pressed in the between-games state
         if (this.state == "interGame") {
             this.newGame();
         }
-
         // Only run this if a word is actively being guessed
-        if (this.state == "activeGame") {
-            // Checks if key was alphabetic A-Z key (keyCode range 65 to 90)
+        else if (this.state == "activeGame") {
+            // Checks if key was alphabetic A-Z key (keyCode range 65 to 90), ignores other keys
             if (65<=keyCode && keyCode<=90) {
                 // Convert keycode to string representation of letter
                 let letter = String.fromCharCode(keyCode);
