@@ -43,8 +43,8 @@ var game = {
             
         }
 
-        // Run this to start a new game if any key is pressed in the between-games state
-        if (this.state == "interGame") {
+        // Run this to start a new game if any key (except F5)is pressed in the between-games state
+        if (this.state == "interGame" && keyCode != 116) {
             this.newGame();
         }
         // Only run this if a word is actively being guessed
