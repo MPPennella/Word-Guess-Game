@@ -7,10 +7,10 @@ body {
 }
 
 .gamePanel {
-    width: 80%;
+    width: 1155px;
     overflow: hidden;
 
-    margin: 0 auto;
+    margin: 50px auto;
     border: 5px solid red;
     border-radius: 30px;
     padding: 20px;
@@ -81,7 +81,7 @@ body {
     float: right;
 
     width: 450px;
-    height: 450px;
+    height: 300px;
 }
 
 #charImage {
