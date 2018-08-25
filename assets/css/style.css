@@ -1,3 +1,7 @@
+body {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
 .gamePanel {
     width: 80%;
     /* height: 500px; */
@@ -19,6 +23,15 @@
     background:palegoldenrod;
 }
 
+.h2 {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 24px;
+}
+
 #wordField {
     font-family: 'Lucida Console', 'Courier New', Courier, monospace;
+}
+
+#charImage {
+    width: 200px;
 }
