@@ -4,24 +4,39 @@ var game = {
     // Array that stores all the objects to be guessed
     wordChoices: [
         {
-            word: "DEFAULTA",
-            name: "Default Name",
-            description: "Short description about Default Name. Just a couple of sentences.",
-            imgSrc: "image.png",
-            soundSrc: "audio.mp3"
+            word: "FRY",
+            name: "Philip J. Fry",
+            description: "Fry is the delivery boy for Planet Express. Originally from the 20th century, due to an accident in a cryogenics lab he was frozen for 1,000 years. He's not very bright, but will stick by his friends at Planet Express.",
+            imgSrc: "https://theinfosphere.org/images/thumb/9/9c/Frozen_Fry.jpg/338px-Frozen_Fry.jpg",
+            soundSrc: ""// no sound
         },
         {
-            word: "DEFAULTB"
-        },
-        {
-            word: "LONGDEFAULT"
+            word: "LEELA",
+            name: "Turanga Leela",
+            description: "Leela is the captain and pilot of the Planet Express ship. Orphaned as a child, she grew up believing she was an alien, but she's actually a mutant human. Tough and no-nonsense, she's the most capable fighter of the crew.",
+            imgSrc: "http://statici.behindthevoiceactors.com/behindthevoiceactors/_img/chars/turanga-leela-futurama-benders-game-90.9.jpg",
+            soundSrc: ""// no sound
         },
         {
             word: "BENDER",
             name: "Bender Bending Rodriguez",
             description: "Bender is a bending robot built in Tijuana, Mexico. An unrepentant heavy drinker, smoker, gambler, and career criminal, he is somehow also the loveable scamp of the Planet Express crew.",
-            imgSrc: "https://vignette.wikia.nocookie.net/en.futurama/images/4/43/Bender.png/revision/latest?cb=20150206072725",
+            imgSrc: "https://i.kym-cdn.com/photos/images/original/000/250/024/e61.jpg",
             soundSrc: "http://futurama-madhouse.net/sounds/misc/bite_my_shiny_metal_ass.mp3"
+        },
+        {
+            word: "PROFESSOR",
+            name: "Professor Hubert J. Farnsworth",
+            description: "Professor Farnsworth is the founder and owner of Planet Express. He is extremely old, and occasionally senile. He is also Fry's last living relative. He often sends the Planet Express crew on dangerous missions with no regard for their safety.",
+            imgSrc: "https://www.geeksofdoom.com/GoD/img/2014/11/professor-farnsworth-futurama-530x310.jpg",
+            soundSrc: "http://futurama-madhouse.net/sounds/misc/goodnewseveryone.mp3"
+        },
+        {
+            word: "ZOIDBERG",
+            name: "Dr. John Zoidberg",
+            description: "Dr. Zoidberg is Planet Express's staff doctor, an alien from the planet Decapot 8. However, he's completely inept when it comes to medical practice. He's also penniless, smells awful, and lives in a dumpster.",
+            imgSrc: "https://comedycentral.mtvnimages.com/images/shows/Futurama/Videos/web_exclusives/futurama_mashup_zoidberg_v6.jpg?quality=0.85&width=480&height=271&crop=true",
+            soundSrc: "https://www.myinstants.com/media/sounds/zoidberg.mp3"
         }
     ],
 
