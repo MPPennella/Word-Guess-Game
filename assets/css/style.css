@@ -18,3 +18,7 @@
 
     background:palegoldenrod;
 }
+
+#wordField {
+    font-family: 'Lucida Console', 'Courier New', Courier, monospace;
+}
