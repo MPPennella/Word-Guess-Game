@@ -43,6 +43,25 @@ body {
 .h140 {
     height: 140px;
 }
+
+.copyrightInfo {
+    flex-shrink: 0;
+
+    width: 100%;
+
+    margin: 0;
+    margin-top: 80px;
+
+    border-top: 5px solid red;
+
+    padding: 25px 0 10px;
+
+    background: #59de8b;
+
+    text-align: center;
+    font-size: 10px;
+}
+
 #gameFuncContainer {
     float: left;
     overflow: hidden;
