@@ -183,9 +183,18 @@ var game = {
         // Placeholders for testing
 
         // Update word with guessed letters, wrong guesses list, guesses remaining
-        document.getElementById("wordField").textContent = this.wordField;
+        document.getElementById("wordField").textContent = this.generateSpacedWord(this.wordField);
         document.getElementById("wrongGuesses").textContent = this.wrongGuesses.toString();
         document.getElementById("guessesRemaining").textContent = this.guessesRemaining;
+    },
+
+    // Takes a string and adds spaces between all characters for hangman formatting - e.g. takes "_____" and returns "_ _ _ _ _ "
+    generateSpacedWord(string) {
+        let spacedString = "";
+        for (let i=0; i<string.length; ++i) {
+            spacedString += string.charAt(i)+" ";
+        }
+        return spacedString;
     }
 
 }
