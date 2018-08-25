@@ -20,7 +20,7 @@ var game = {
             word: "BENDER",
             name: "Bender Bending Rodriguez",
             description: "Bender is a bending robot built in Tijuana, Mexico. An unrepentant heavy drinker, smoker, gambler, and career criminal, he is somehow also the loveable scamp of the Planet Express crew.",
-            imgSrc: "http://futurama.wikia.com/wiki/File:Bender.png",
+            imgSrc: "https://vignette.wikia.nocookie.net/en.futurama/images/4/43/Bender.png/revision/latest?cb=20150206072725",
             soundSrc: "http://futurama-madhouse.net/sounds/misc/bite_my_shiny_metal_ass.mp3"
         }
     ],
@@ -156,6 +156,7 @@ var game = {
         document.getElementById("description").textContent = this.chosenChar.description;
         // Display image
         document.getElementById("charImage").setAttribute("src", this.chosenChar.imgSrc);
+        document.getElementById("charImage").setAttribute("alt", this.chosenChar.name);
         // Add and play audio from ref: this.chosenChar.soundSrc
         let audio = new Audio(this.chosenChar.soundSrc);
         audio.play();
