@@ -32,6 +32,13 @@ body {
 
 #wordField {
     font-family: 'Lucida Console', 'Courier New', Courier, monospace;
+    font-size: 40px;
+    color: paleturquoise;
+
+    background-color: darkslategray;
+    border: 2px solid steelblue;
+
+    padding: 20px;
 }
 
 #charImage {
