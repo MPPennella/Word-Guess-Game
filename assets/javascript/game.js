@@ -15,11 +15,19 @@ var game = {
         },
         {
             word: "LONGDEFAULT"
+        },
+        {
+            word: "BENDER",
+            name: "Bender Bending Rodriguez",
+            description: "Bender is a bending robot built in Tijuana, Mexico. An unrepentant heavy drinker, smoker, gambler, and career criminal, he is somehow also the loveable scamp of the Planet Express crew.",
+            imgSrc: "http://futurama.wikia.com/wiki/File:Bender.png",
+            soundSrc: "http://futurama-madhouse.net/sounds/misc/bite_my_shiny_metal_ass.mp3"
         }
     ],
 
     // Values for holding important game information
     state: "interGame",
+    chosenChar: {},
     chosenWord: "",
     wordField: "",
     wrongGuesses: [],
@@ -29,7 +37,8 @@ var game = {
     // function chooses a random member of wordChoices to be the target word
     chooseWord() {
         let index = Math.floor( Math.random()*this.wordChoices.length );
-        this.chosenWord = this.wordChoices[index].word;
+        this.chosenChar = this.wordChoices[index];
+        this.chosenWord = this.chosenChar.word;
         console.log(this.chosenWord);
     },
 
@@ -139,6 +148,17 @@ var game = {
         } else {
 
         }
+
+        // Output identity information for character
+        // Full Name
+        document.getElementById("name").textContent = this.chosenChar.name;
+        // Character description
+        document.getElementById("description").textContent = this.chosenChar.description;
+        // Display image
+        document.getElementById("charImage").setAttribute("src", this.chosenChar.imgSrc);
+        // Add and play audio from ref: this.chosenChar.soundSrc
+        let audio = new Audio(this.chosenChar.soundSrc);
+        audio.play();
 
         // Update instructions
         document.getElementById("instructions").textContent = "Press any key to play again!";
