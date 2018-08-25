@@ -34,7 +34,7 @@ var game = {
         {
             word: "ZOIDBERG",
             name: "Dr. John Zoidberg",
-            description: "Dr. Zoidberg is Planet Express's staff doctor, an alien from the planet Decapot 8. However, he's completely inept when it comes to medical practice. He's also penniless, smells awful, and lives in a dumpster.",
+            description: "Dr. Zoidberg is Planet Express's staff doctor, an alien from the planet Decapod 10. However, he's completely inept when it comes to medical practice. He's also penniless, smells awful, and lives in a dumpster.",
             imgSrc: "https://comedycentral.mtvnimages.com/images/shows/Futurama/Videos/web_exclusives/futurama_mashup_zoidberg_v6.jpg?quality=0.85&width=480&height=271&crop=true",
             soundSrc: "https://www.myinstants.com/media/sounds/zoidberg.mp3"
         }
