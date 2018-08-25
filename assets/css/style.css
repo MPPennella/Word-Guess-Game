@@ -101,7 +101,7 @@ body {
     padding: 20px;
 }
 
-#wrongGuesses {
+#wrongGuesses, #guessesRemaining {
     font-size: 20px;
     height: 20px;
 }
